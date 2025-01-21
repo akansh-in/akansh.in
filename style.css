@@ -876,3 +876,44 @@ body {
   font-weight: bold;
   color: #333;
 }
+
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .project-item {
+    text-align: center;
+    flex: 0 1 calc(33.33% - 20px); /* 3 items per row */
+    box-sizing: border-box;
+  }
+
+  .project-item img {
+    width: auto;
+    max-width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .project-item {
+      flex: 0 1 calc(50% - 20px); /* 2 items per row */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .project-item {
+      flex: 0 1 100%; /* 1 item per row */
+    }
+  }
